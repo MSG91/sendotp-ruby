@@ -7,7 +7,7 @@ This SDK enables sendOTP and allows you to send OTP
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'send_otp'
+gem 'sendotp'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install send_otp  
+    $ gem install sendotp  
         
 ### Requests  
 ```
