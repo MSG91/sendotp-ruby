@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'send_otp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "send_otp"
+  spec.name          = "sendotp"
   spec.version       = SendOtp::VERSION
   spec.authors       = ["Utkarsh"]
   spec.email         = ["utkarsh@walkover.in"]
