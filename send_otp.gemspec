@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Utkarsh"]
   spec.email         = ["utkarsh@walkover.in"]
 
-  spec.summary       = %q{Will write}
-  spec.description   = %q{will update}
-  spec.homepage      = "https://sendotp.com"
+  spec.summary       = %q{This gem allows to send otp, verify otp and retry otp}
+  spec.description   = %q{This gem enables sendOTP and allows you to send OTP}
+  spec.homepage      = "https://sendotp.msg91.com/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
