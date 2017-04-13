@@ -1,8 +1,6 @@
 # SendOtp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/send_otp`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This SDK enables sendOTP and allows you to send OTP
 
 ## Installation
 
@@ -20,15 +18,43 @@ Or install it yourself as:
 
     $ gem install send_otp
 
-## Usage
+###Requests
+sendotp = SendOtp::Otp.new('AuthKey')  
+sendotp.send_otp(contact_number, sender_id, otp); //otp is optional if not sent it'll be generated automatically  
+sendotp.retry(contact_number, retry_voice);  
+sendotp.verify(contact_number, otp);  
 
-TODO: Write usage instructions here
+##Usage
+To send OTP, without optional parameters 
+```
+sendotp.send_otp("919999999999", "PRIIND")
+```  
 
-## Development
+To send OTP, with optional parameters  
+```
+sendOtp.send_otp("919999999999", "PRIIND", "4635")
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+To retry OTP
+```
+sendotp.retry("919999999999", false)
+```
+**Note:** Set retry_voice false if you want to retry otp via text, default value is true
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To verify OTP
+
+```
+sendOtp.verify("919999999999", "4635);
+```
+**Options**:
+
+By default SendOtp uses default message template, but custom message template can also set in constructor like
+```
+sendotp = SendOtp::Otp.new('AuthKey',  'Otp for your order is {{otp}}, please do not share it with anybody')  
+```  
+<br/>
+{{otp}} expression is used to inject generated otp in message.
+
 
 ## Contributing
 
