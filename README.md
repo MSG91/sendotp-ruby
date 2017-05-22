@@ -20,6 +20,8 @@ Or install it yourself as:
         
 ### Requests  
 ```
+require 'send_otp'
+
 sendotp = SendOtp::Otp.new('AuthKey')  
 sendotp.send_otp(contact_number, sender_id, otp); //otp is optional if not sent it'll be generated automatically  
 sendotp.retry(contact_number, retry_voice);  
